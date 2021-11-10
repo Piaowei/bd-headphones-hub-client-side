@@ -1,0 +1,22 @@
+.add-sevice form {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.add-sevice form input, textarea {
+	width: 70%;
+	margin: 5px;
+	/* border-radius: 5px; */
+	/* border-color: blue; */
+}
+
+.submit-order-btn {
+	background-color: tomato;
+	color: white;
+	border: 0;
+	border-radius: 10px;
+}

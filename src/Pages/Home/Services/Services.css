@@ -1,0 +1,21 @@
+.carts {
+	box-shadow: 10px 10px 20px #97a7ff;
+	border: none;
+}
+
+.carts:hover {
+	box-shadow: 4px 4px 7px gray;
+	border-radius: 10px;
+	border: 1px solid #1d05fb;
+	background: white;
+}
+
+.no-margin {
+	margin-top: 0px;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+title {
+	color: #f75002;
+}

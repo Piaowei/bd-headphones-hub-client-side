@@ -1,0 +1,6 @@
+.google:hover {
+	box-shadow: 4px 4px 7px gray;
+	border-radius: 10px;
+	border: 1px solid #05fbef;
+	background: white;
+}

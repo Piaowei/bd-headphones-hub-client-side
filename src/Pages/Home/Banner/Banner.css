@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Permanent+Marker&display=swap');
+.carts-home {
+	box-shadow: 10px 10px 20px #ffb18d;
+	border: none;
+}
+
+.carts-home:hover {
+	box-shadow: 4px 4px 7px gray;
+	border-radius: 10px;
+	border: 1px solid #ff8a54;
+	background: white;
+}

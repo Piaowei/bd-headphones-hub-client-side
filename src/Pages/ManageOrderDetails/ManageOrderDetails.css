@@ -1,0 +1,17 @@
+.no-margin {
+	margin-top: 0px;
+	margin-left: 0;
+	padding: 0;
+}
+
+.carts-pub {
+	box-shadow: 10px 10px 20px #befaff;
+	border: none;
+}
+
+.carts-pub:hover {
+	box-shadow: 4px 4px 7px gray;
+	border-radius: 10px;
+	border: 1px solid #05fbef;
+	background: white;
+}

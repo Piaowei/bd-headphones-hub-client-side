@@ -1,0 +1,34 @@
+.shipping-form input {
+	display: block;
+	margin-top: 30px;
+	padding: 5px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	width: 300px;
+}
+
+.error {
+	color: red;
+}
+
+.form-class {
+	margin-left: 25px;
+}
+
+.submit-btn {
+	background-color: orangered;
+	color: white;
+}
+
+.info-bg {
+	background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+
+.price-bg {
+	background-image: linear-gradient(to right, #ff9966, #ff5e62);
+}
+
+/* .item-space {
+	margin-top: 40px;
+	padding-top: 60px;
+} */

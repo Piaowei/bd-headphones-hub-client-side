@@ -1,0 +1,12 @@
+.nav-color {
+	background-color: #f75002;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.hover-link:hover {
+	background-color: red;
+	font-style: italic;
+	border-radius: 5px;
+}

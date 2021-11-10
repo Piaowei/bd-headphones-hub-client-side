@@ -1,0 +1,26 @@
+.footer-text-bd {
+	color: white;
+	text-shadow: white;
+}
+
+.footer-text-bd h4 {
+	color: #f75002;
+	font-weight: 700;
+	text-shadow: white;
+}
+
+.footer-text-bd p {
+	color: white;
+	font-weight: 250;
+	text-shadow: white;
+}
+
+.footer-bg {
+	background-color: #2d3e52
+}
+
+.copyright {
+	background: black;
+	margin-bottom: 0px;
+	padding: 8px;
+}

@@ -1,0 +1,19 @@
+.myOrder-bg {
+	background-color: rgb(42, 26, 85);
+}
+
+.my-order {
+	color: hotpink;
+}
+
+.carts-item {
+	box-shadow: 7px 7px 15px #c666d3;
+	border: none;
+}
+
+.carts-item:hover {
+	box-shadow: 4px 4px 7px gray;
+	border-radius: 10px;
+	border: 1px solid #05fbef;
+	background: white;
+}

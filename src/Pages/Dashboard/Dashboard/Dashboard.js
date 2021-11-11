@@ -34,6 +34,8 @@ import AddService from '../../addService/AddService';
 import ManageAllProducts from '../ManageAllProducts/ManageAllProducts';
 import Home from '../../Home/Home/Home';
 import Myorders from '../../MyOrders/Myorders';
+import Payment from '../Payment/Payment';
+import PrivateRoute from '../../Login/PrivateRoute/PrivateRoute';
 // import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 const drawerWidth = 200;
@@ -52,9 +54,11 @@ function Dashboard(props) {
 		<div>
 			<Toolbar />
 			<Divider />
-			{!admin && < Box style={{ textAlign: "start" }}>
+			{!admin && <Box style={{ textAlign: "start" }}>
 
-				<Link to="/myorders" ><Button color="inherit">My Orders</Button></Link>
+
+				<Link to={`${url}`} ><Button color="inherit">Check My Orders</Button></Link>
+				<Link to={`${url}/payment`} ><Button color="inherit"> Payment</Button></Link>
 
 			</Box>}
 			{admin && <Box style={{ textAlign: "start" }} >
@@ -62,22 +66,12 @@ function Dashboard(props) {
 				<Link to={`${url}/manageAllProducts`} ><Button color="inherit">Manage Products</Button></Link>
 				<Link to={`${url}/addservice`} ><Button color="inherit">Add a Product</Button></Link>
 				<Link to={`${url}/makeAdmin`} ><Button color="inherit">Make Admin</Button></Link>
-				<Link to="/home" ><Button color="inherit">Go Back Home</Button></Link>
-				<p className="nav-link active fs-6 fw-bolder hover-link text-warning " onClick={logout}>Logout</p>
-				<br />
-
-
 			</Box>}
-			{/* <List>
-				{['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-					<ListItem button key={text}>
-						<ListItemIcon>
-							{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-						</ListItemIcon>
-						<ListItemText primary={text} />
-					</ListItem>
-				))}
-			</List> */}
+
+			<Link to="/home" ><Button color="inherit">Go Back Home</Button></Link>
+			<p className="nav-link active fs-6 fw-bolder hover-link text-warning " onClick={logout}>Logout</p>
+			<br />
+
 
 		</div >
 	);
@@ -153,9 +147,14 @@ function Dashboard(props) {
 						<DashboardHome></DashboardHome>
 					</Route>
 
-					<Route exact path={`${path}/myorders`}>
+					<PrivateRoute exact path={`${path}/myorders`}>
 						<Myorders></Myorders>
+					</PrivateRoute>
+
+					<Route exact path={`${path}/payment`}>
+						<Payment></Payment>
 					</Route>
+
 					<AdminRoute path={`${path}/makeAdmin`}>
 						<MakeAdmin></MakeAdmin>
 					</AdminRoute>

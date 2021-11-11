@@ -35,6 +35,27 @@ const ManageAllProducts = () => {
 	}
 
 
+	// FOR DELETE
+	const handleDelete = id => {
+		console.log("worked from dashboard ", id);
+		const url = `http://localhost:5000/products/${id}`;
+		fetch(url, {
+			method: 'DELETE'
+		})
+			.then(res => res.json())
+			.then(data => {
+
+				if (data.deletedCount) {
+					window.alert("Products is Deleted")
+					const remaining = products.filter(service => service._id !== id);
+					setProducts(remaining);
+				}
+			});
+
+	}
+
+
+
 	return (
 		<div>
 			<h2>My total Order Amount: {products.length}</h2>
@@ -54,8 +75,8 @@ const ManageAllProducts = () => {
 							>
 								<TableCell align="left"> <img align="left" style={{ width: '90px', height: "70px" }} src={row.img} /> </TableCell>
 								<TableCell align="left">{row.name}</TableCell>
-								<TableCell align="left">{row.time}</TableCell>
-								<Button variant='contained' style={{ backgroundColor: '#5CE7ED' }}  >Delete Product</Button>
+								<TableCell align="left"><Button onClick={() => handleDelete(row._id)} variant='contained' style={{ backgroundColor: '#5CE7ED' }}  >Delete Product</Button></TableCell>
+
 
 							</TableRow>
 						))}

@@ -14,7 +14,7 @@ const MyorderDetails = (props) => {
 
 		<div className="col ">
 			<div className="card h-100 carts-item">
-				<img src={productimg} className="img-fluid  card-img-top" alt="..." />
+				<img style={{ height: "280px", width: "200px" }} src={productimg} className="img-fluid  card-img-top" alt="..." />
 				<div className="card-body m-0">
 					<h5 className="card-title">{productName}</h5>
 					<h6 className="text-danger" >{productStatus}</h6>

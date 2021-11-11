@@ -44,7 +44,7 @@ const Myorders = () => {
 
 	return (
 		<div id="nav-bar" className="myOrder-bg">
-			<h1 className=" pt-2 pb-2 my-order ">My  Orders </h1>
+			<h1 className="  pb-2 my-order ">My  Orders </h1>
 			<div className="row row-cols-1 row-cols-md-3 g-4 container-fluid mx-0 p-1">
 				{
 					services.map(service => <MyorderDetails

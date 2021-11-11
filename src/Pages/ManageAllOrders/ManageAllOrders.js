@@ -7,6 +7,7 @@ const ManageAllOrders = () => {
 	const [isFound, setIsFound] = useState(true);
 	const [services, setServices] = useState([])
 	const [productStatus, setProductStatus] = useState(false);
+
 	useEffect(() => {
 		setIsFound(true);
 		fetch('http://localhost:5000/orderItems')
@@ -39,7 +40,7 @@ const ManageAllOrders = () => {
 			})
 	}
 
-
+	console.log("hello brooooo", services);
 	//UPDATE API
 	const handleUpdateUser = e => {
 		setProductStatus(true)

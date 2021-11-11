@@ -14,11 +14,17 @@ const MyorderDetails = (props) => {
 
 		<div className="col ">
 			<div className="card h-100 carts-item">
-				<img style={{ height: "280px", width: "200px" }} src={productimg} className="img-fluid  card-img-top" alt="..." />
+				<div className="d-flex justify-content-evenly align-items-center mt-2">
+					<img style={{ height: "100px", width: "80px" }} src={productimg} className="img-fluid  card-img-top px-2" alt="..." />
+					<small className="card-title">{productName.slice(0, 40)}</small>
+
+				</div>
 				<div className="card-body m-0">
-					<h5 className="card-title">{productName}</h5>
-					<h6 className="text-danger" >{productStatus}</h6>
-					<button className="btn btn-danger" onClick={() => handleDelete(_id)} >Delete</button>
+					<div className="d-flex justify-content-between  align-items-center" >
+						<h6 className="text-danger" >{productStatus}</h6>
+						<button className="btn btn-danger" onClick={() => handleDelete(_id)} >Delete</button>
+					</div>
+
 				</div>
 			</div>
 		</div>

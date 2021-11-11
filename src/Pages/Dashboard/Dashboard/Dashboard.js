@@ -36,6 +36,7 @@ import Home from '../../Home/Home/Home';
 import Myorders from '../../MyOrders/Myorders';
 import Payment from '../Payment/Payment';
 import PrivateRoute from '../../Login/PrivateRoute/PrivateRoute';
+import Review from '../Review/Review';
 // import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 const drawerWidth = 200;
@@ -59,6 +60,7 @@ function Dashboard(props) {
 
 				<Link to={`${url}`} ><Button color="inherit">Check My Orders</Button></Link>
 				<Link to={`${url}/payment`} ><Button color="inherit"> Payment</Button></Link>
+				<Link to={`${url}/review`} ><Button color="inherit"> Review</Button></Link>
 
 			</Box>}
 			{admin && <Box style={{ textAlign: "start" }} >
@@ -149,6 +151,9 @@ function Dashboard(props) {
 
 					<PrivateRoute exact path={`${path}/myorders`}>
 						<Myorders></Myorders>
+					</PrivateRoute>
+					<PrivateRoute exact path={`${path}/review`}>
+						<Review></Review>
 					</PrivateRoute>
 
 					<Route exact path={`${path}/payment`}>

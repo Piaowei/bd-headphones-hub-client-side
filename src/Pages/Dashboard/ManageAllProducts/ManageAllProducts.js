@@ -76,8 +76,6 @@ const ManageAllProducts = () => {
 								<TableCell align="left"> <img align="left" style={{ width: '90px', height: "70px" }} src={row.img} /> </TableCell>
 								<TableCell align="left">{row.name}</TableCell>
 								<TableCell align="left"><Button onClick={() => handleDelete(row._id)} variant='contained' style={{ backgroundColor: '#5CE7ED' }}  >Delete Product</Button></TableCell>
-
-
 							</TableRow>
 						))}
 					</TableBody>

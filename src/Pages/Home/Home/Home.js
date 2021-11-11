@@ -6,6 +6,7 @@ import Accordion from '../Accordion/Accordion';
 import Destination from '../Destination/Destination';
 import Header from '../../Shared/Header/Header';
 import Footer from '../../Shared/Footer/Footer';
+import ReviewItems from '../ReviewItems/ReviewItems';
 
 const Home = () => {
     return (
@@ -13,7 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <Services></Services>
             <Accordion></Accordion>
-            <Destination></Destination>
+            <ReviewItems></ReviewItems>
             <Footer></Footer>
         </div>
     );

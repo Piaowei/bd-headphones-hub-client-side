@@ -34,6 +34,7 @@ const Review = () => {
 	const onSubmit = data => {
 		setIsFound(true);
 		data.name = user.displayName;
+		data.rate = value;
 		console.log("This is  data from review ", data);
 		axios.post('http://localhost:5000/review', data)
 			.then(res => {

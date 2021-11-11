@@ -16,8 +16,8 @@ const Service = (props) => {
         <div>
             <div className="card mb-3 container-fluid no-margin carts" >
                 <div className="row g-0">
-                    <div className="col-md-4  d-flex ">
-                        <img src={img} className="img-fluid rounded-start" alt="..." />
+                    <div className="col-md-4  ">
+                        <img style={{ height: "280px", width: "200px" }} src={img} className="img-fluid rounded-start my-2 " alt="..." />
                     </div>
                     <div className="col-md-8 no-margin">
                         <div className="card-body ">
@@ -29,9 +29,9 @@ const Service = (props) => {
                             </p>
 
                             <div className="d-flex justify-content-between align-items-center">
-                                <h5 className="price" >Price Starts at: <span className="text-black" >&yen;{price}</span> </h5>
+                                <h5 className="price" >Price : <span className="text-black" >$ {price}</span> </h5>
                                 <Nav.Link as={HashLink} to={`/booking/${_id}#booking`}>
-                                    <button className="btn btn-danger button ">Book Now </button>
+                                    <button className="btn btn-danger button ">Buy Now </button>
                                 </Nav.Link>
                             </div>
 

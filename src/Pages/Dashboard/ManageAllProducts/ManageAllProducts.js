@@ -9,49 +9,53 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { height } from '@mui/system';
 import Button from '@restart/ui/esm/Button';
+import { Spinner } from 'react-bootstrap';
 
 const ManageAllProducts = () => {
+	const [products, setProducts] = useState([])
+	const [isFound, setIsFound] = useState(true);
 	const { user } = useAuth();
 	const [appointments, setAppointments] = useState([]);
 
 	useEffect(() => {
-		// const url = `http://localhost:5000/orderItems?email=${user.email}`
-		const url = `http://localhost:5000/orderItems/`
-		fetch(url)
+		setIsFound(true);
+		fetch('http://localhost:5000/products')
 			.then(res => res.json())
 			.then(data => {
-				console.log("order items", data)
-				setAppointments(data)
+				setProducts(data)
+				console.log("from manage orders", data)
 			})
+			.finally(() => setIsFound(false));
+
 	}, [])
+
+
+	if (isFound) {
+		return <Spinner animation="border" variant="danger" />
+	}
+
 
 	return (
 		<div>
-			<h2>My total Order Amount: {appointments.length}</h2>
+			<h2>My total Order Amount: {products.length}</h2>
 			<TableContainer component={Paper}>
 				<Table aria-label="Appointments table">
 					<TableHead>
 						<TableRow>
 							<TableCell align="left" >Image</TableCell>
 							<TableCell align="left">Name</TableCell>
-							<TableCell align="left">Time</TableCell>
-							<TableCell align="left">Service</TableCell>
 						</TableRow>
 					</TableHead>
 					<TableBody>
-						{appointments.map((row) => (
+						{products.map((row) => (
 							<TableRow
 								key={row._id}
 								sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
 							>
-								<TableCell align="left"> <img align="left" style={{ width: '90px', height: "70px" }} src={row.productimg} /> </TableCell>
+								<TableCell align="left"> <img align="left" style={{ width: '90px', height: "70px" }} src={row.img} /> </TableCell>
 								<TableCell align="left">{row.name}</TableCell>
-
 								<TableCell align="left">{row.time}</TableCell>
-								<TableCell align="left">{row.serviceName}</TableCell>
-								<TableCell align="left">{row.fat}</TableCell>
-
-								<Button variant='contained' style={{ backgroundColor: '#5CE7ED' }}  >Delete Order</Button>
+								<Button variant='contained' style={{ backgroundColor: '#5CE7ED' }}  >Delete Product</Button>
 
 							</TableRow>
 						))}

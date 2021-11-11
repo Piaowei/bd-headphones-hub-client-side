@@ -68,7 +68,6 @@ function App() {
             <Route path="/moreProducts" >
               <MoreProducts></MoreProducts>
             </Route>
-
             <PrivateRoute path="/manageAllOrders" >
               <ManageAllOrders></ManageAllOrders>
             </PrivateRoute>

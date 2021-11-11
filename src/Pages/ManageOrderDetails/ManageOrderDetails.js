@@ -13,7 +13,7 @@ const ManageOrderDetails = (props) => {
 			<div className="card mb-3 container-fluid no-margin carts-pub " >
 				<div className="row g-0">
 					<div className="col-md-4 col-12 ">
-						<img style={{ height: "200px", width: "200px" }} src={productimg} className="img-fluid rounded-start" alt="Product Image" />
+						<img style={{ height: "250px", width: "200px" }} src={productimg} className="img-fluid rounded-start my-1 " alt="Product Image" />
 					</div>
 					<div className="col-md-8 col-12 ">
 						<div className="card-body ">

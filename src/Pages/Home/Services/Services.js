@@ -23,12 +23,12 @@ const Services = () => {
 
     return (
         <div className="container-fluid">
-            <h1 className="text-primary mt-5 pb-2 title ">Our services</h1>
+            <h1 className="text-primary mt-5 pb-2 title ">Headphones Collection</h1>
 
 
             <div className=" service-container ">
                 {
-                    (services.slice(0, 3)).map(service => <Service
+                    (services.slice(0, 6)).map(service => <Service
                         key={service._id}
                         service={service}
                         short={service.description.slice(0.15)}

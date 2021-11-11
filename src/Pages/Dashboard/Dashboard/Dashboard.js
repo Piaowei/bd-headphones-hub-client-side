@@ -33,6 +33,7 @@ import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import AddService from '../../addService/AddService';
 import ManageAllProducts from '../ManageAllProducts/ManageAllProducts';
 import Home from '../../Home/Home/Home';
+import Myorders from '../../MyOrders/Myorders';
 // import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 const drawerWidth = 200;
@@ -51,9 +52,11 @@ function Dashboard(props) {
 		<div>
 			<Toolbar />
 			<Divider />
-			<Box style={{ textAlign: "start" }}>
-				<Link to="/appointment" ><Button color="inherit">Apppointment</Button></Link>
-			</Box>
+			{!admin && < Box style={{ textAlign: "start" }}>
+
+				<Link to="/myorders" ><Button color="inherit">My Orders</Button></Link>
+
+			</Box>}
 			{admin && <Box style={{ textAlign: "start" }} >
 				<Link to={`${url}`} ><Button color="inherit">Manage All Orders</Button></Link>
 				<Link to={`${url}/manageAllProducts`} ><Button color="inherit">Manage Products</Button></Link>
@@ -65,7 +68,7 @@ function Dashboard(props) {
 
 
 			</Box>}
-			<List>
+			{/* <List>
 				{['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
 					<ListItem button key={text}>
 						<ListItemIcon>
@@ -74,7 +77,7 @@ function Dashboard(props) {
 						<ListItemText primary={text} />
 					</ListItem>
 				))}
-			</List>
+			</List> */}
 
 		</div >
 	);
@@ -101,7 +104,7 @@ function Dashboard(props) {
 					>
 						<MenuIcon />
 					</IconButton>
-					<Typography variant="h6" noWrap component="div">
+					<Typography sx={{ my: 3 }} variant="h6" noWrap component="div">
 						Dashboard
 					</Typography>
 				</Toolbar>
@@ -148,6 +151,10 @@ function Dashboard(props) {
 
 					<Route exact path={path}>
 						<DashboardHome></DashboardHome>
+					</Route>
+
+					<Route exact path={`${path}/myorders`}>
+						<Myorders></Myorders>
 					</Route>
 					<AdminRoute path={`${path}/makeAdmin`}>
 						<MakeAdmin></MakeAdmin>

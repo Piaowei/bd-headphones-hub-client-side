@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import { useForm } from "react-hook-form";
 import './Booking.css'
 import useAuth from '../../../hooks/useAuth';
+import Footer from '../../Shared/Footer/Footer';
 
 const Booking = () => {
     const { user } = useAuth();
@@ -90,6 +91,7 @@ const Booking = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
 
 

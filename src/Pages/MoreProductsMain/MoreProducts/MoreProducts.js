@@ -27,7 +27,7 @@ const MoreProducts = () => {
 		<div>
 
 			<div className="container-fluid">
-				<h1 className="text-primary mt-5 pb-2 title ">Our services</h1>
+				<h1 className="text-primary mt-5 pb-2 title ">All Headphone</h1>
 
 
 				<div className=" service-container ">
@@ -41,7 +41,6 @@ const MoreProducts = () => {
 					}
 				</div>
 			</div>
-			<Footer></Footer>
 		</div>
 	);
 };

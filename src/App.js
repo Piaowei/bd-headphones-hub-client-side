@@ -17,6 +17,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Register from './Pages/Login/Register/Register';
 import MoreProducts from './Pages/MoreProductsMain/MoreProducts/MoreProducts';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import MoreProductsMain from './Pages/MoreProductsMain/MoreProductsMain/MoreProductsMain';
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
     <div className="App">
       <AuthProvider>
         <Router>
-          <Header></Header>
+          {/* <Header></Header> */}
           <Switch>
 
             <Route exact path="/">
@@ -66,7 +67,7 @@ function App() {
               <Service></Service>
             </Route>
             <Route path="/moreProducts" >
-              <MoreProducts></MoreProducts>
+              <MoreProductsMain></MoreProductsMain>
             </Route>
             <PrivateRoute path="/manageAllOrders" >
               <ManageAllOrders></ManageAllOrders>

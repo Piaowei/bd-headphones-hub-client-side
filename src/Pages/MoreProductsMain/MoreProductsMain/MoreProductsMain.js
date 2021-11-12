@@ -6,8 +6,9 @@ import MoreProducts from '../MoreProducts/MoreProducts';
 const MoreProductsMain = () => {
 	return (
 		<div>
-			{/* <Header></Header> */}
+			<Header></Header>
 			<MoreProducts></MoreProducts>
+			<Footer></Footer>
 
 		</div>
 	);

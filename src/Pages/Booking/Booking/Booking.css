@@ -21,14 +21,21 @@
 }
 
 .info-bg {
-	background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+	background-image: linear-gradient(to right, #7300df, #4322ff, #a013ff);
 }
 
 .price-bg {
-	background-image: linear-gradient(to right, #ff9966, #ff5e62);
+	background-image: linear-gradient(to right, #ff9966, #ff5e62, #a013ff);
 }
 
 /* .item-space {
 	margin-top: 40px;
 	padding-top: 60px;
 } */
+
+.purchase-bg {
+	background-image: url(../../../images/slider-1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}

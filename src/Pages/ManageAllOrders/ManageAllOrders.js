@@ -69,7 +69,7 @@ const ManageAllOrders = () => {
 
 	return (
 		<div id="nav-bar" className="mb-5" >
-			<h2 className="text-primary pt-3 pb-3">Manage All Users </h2>
+			<h2 className="text-primary pt-3 pb-3">Manage All Orders </h2>
 			<div className="service-container ">
 				{
 					services.map(service => <ManageOrderDetails

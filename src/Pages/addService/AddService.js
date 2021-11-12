@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import './AddService.css';
 import { Spinner } from 'react-bootstrap';
-import hotel from '../../images/hotel.jpg'
+import addservice from '../../images/addservice.jpg'
 
 
 
@@ -33,7 +33,7 @@ const AddService = () => {
 					<div className="row g-0 ">
 						<div className="col col-12 ">
 							<div className="card h-100 carts-item">
-								<img src={hotel} className="img-fluid  card-img-top" alt="..." />
+								<img src={addservice} className="img-fluid  card-img-top" alt="..." />
 							</div>
 						</div>
 					</div>

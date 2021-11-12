@@ -8,6 +8,7 @@ import useAuth from '../../../hooks/useAuth';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
+import fila from '../../../images/fila.jpg'
 import './Review.css'
 
 const labels = {
@@ -48,9 +49,12 @@ const Review = () => {
 	};
 
 	return (
-		<div>
+		<div className="review row">
+			<div className=" ">
+				<img className="img-fluid" src={fila} alt="" />
+			</div>
 
-			<div className="add-sevice1">
+			<div className="add-sevice1   ">
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<textarea className="textArea" {...register("description", { required: true })} placeholder="Description" />
 					{errors.description?.type === 'required' && <span className="text-danger">Review is required</span>}
@@ -81,9 +85,6 @@ const Review = () => {
 				</form>
 			</div>
 
-
-
-			<h2>"value",{value}</h2>
 
 
 		</div >

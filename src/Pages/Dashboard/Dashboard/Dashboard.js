@@ -21,7 +21,8 @@ import {
 	Switch,
 	Route,
 	Link,
-	useRouteMatch
+	useRouteMatch,
+	NavLink
 } from "react-router-dom";
 
 import { Button, Grid } from '@mui/material';
@@ -37,6 +38,8 @@ import Myorders from '../../MyOrders/Myorders';
 import Payment from '../Payment/Payment';
 import PrivateRoute from '../../Login/PrivateRoute/PrivateRoute';
 import Review from '../Review/Review';
+import './Dashboard.css'
+import { Navbar } from 'react-bootstrap';
 // import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 const drawerWidth = 200;
@@ -52,26 +55,39 @@ function Dashboard(props) {
 	};
 
 	const drawer = (
-		<div>
+		<div className="drawer" >
 			<Toolbar />
-			<Divider />
+			{/* <Divider /> */}
 			{!admin && <Box style={{ textAlign: "start" }}>
 
 
-				<Link to={`${url}`} ><Button color="inherit">Check My Orders</Button></Link>
-				<Link to={`${url}/payment`} ><Button color="inherit"> Payment</Button></Link>
-				<Link to={`${url}/review`} ><Button color="inherit"> Review</Button></Link>
+				<Link className="nav-link active fs-6 fw-bolder  hover-link5  " to={`${url}`} ><Button className="hover-link5  fw-bold  " color="inherit">Check My Orders</Button></Link>
+
+				<NavLink className="nav-link active fs-6 fw-bolder  hover-link5  " to={`${url}/payment`} ><Button className="hover-link5  fw-bold  " color="inherit"> Payment</Button></NavLink>
+
+				<NavLink className="nav-link active fs-6 fw-bold hover-link5  " to={`${url}/review`} ><Button className="hover-link5  fw-bold " color="inherit"> Review</Button></NavLink>
+				<br />
 
 			</Box>}
 			{admin && <Box style={{ textAlign: "start" }} >
-				<Link to={`${url}`} ><Button color="inherit">Manage All Orders</Button></Link>
-				<Link to={`${url}/manageAllProducts`} ><Button color="inherit">Manage Products</Button></Link>
-				<Link to={`${url}/addservice`} ><Button color="inherit">Add a Product</Button></Link>
-				<Link to={`${url}/makeAdmin`} ><Button color="inherit">Make Admin</Button></Link>
+				<Link className="nav-link active fs-6 fw-bolder hover-link5  " to={`${url}`} ><Button className="hover-link5  fw-bold  " color="inherit">Manage Orders</Button></Link>
+
+				<Link className="nav-link active fs-6 fw-bolder hover-link5  " to={`${url}/manageAllProducts`} ><Button className="hover-link5  fw-bold  " color="inherit">Manage Products</Button ></Link>
+
+				<Link className="nav-link active fs-6 fw-bolder hover-link5  " to={`${url}/addservice`} ><Button className="hover-link5  fw-bold  " color="inherit">Add a Product</Button></Link>
+
+				<Link className="nav-link active fs-6 fw-bolder hover-link5  " to={`${url}/makeAdmin`} ><Button className="hover-link5  fw-bold  " color="inherit">Make Admin</Button></Link>
 			</Box>}
 
-			<Link to="/home" ><Button color="inherit">Go Back Home</Button></Link>
-			<p className="nav-link active fs-6 fw-bolder hover-link text-warning " onClick={logout}>Logout</p>
+
+
+			<Box style={{ textAlign: "start" }}>
+
+				<Link className="nav-link active fw-bolder hover-link5  " to="/home" ><Button className="text-warning hover-link5  fw-bold   " color="inherit">Go Back Home</Button></Link>
+				<h6 className="ps-4 nav-link active fs-6  fw-bold  fw-bolder hover-link text-danger hover-link5  " onClick={logout}>Logout</h6>
+
+			</Box>
+
 			<br />
 
 
@@ -90,7 +106,7 @@ function Dashboard(props) {
 					ml: { sm: `${drawerWidth}px` },
 				}}
 			>
-				<Toolbar>
+				<Toolbar className="review-bg" >
 					<IconButton
 						color="inherit"
 						aria-label="open drawer"
@@ -100,9 +116,9 @@ function Dashboard(props) {
 					>
 						<MenuIcon />
 					</IconButton>
-					<Typography sx={{ my: 3 }} variant="h6" noWrap component="div">
+					<h3 className="dash" >
 						Dashboard
-					</Typography>
+					</h3>
 				</Toolbar>
 			</AppBar>
 			<Box

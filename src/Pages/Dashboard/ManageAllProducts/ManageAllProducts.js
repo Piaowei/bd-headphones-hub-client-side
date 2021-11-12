@@ -10,6 +10,9 @@ import Paper from '@mui/material/Paper';
 import { height } from '@mui/system';
 import Button from '@restart/ui/esm/Button';
 import { Spinner } from 'react-bootstrap';
+import { MdDeleteForever } from 'react-icons/md';
+
+import "./ManageAllProducts.css"
 
 const ManageAllProducts = () => {
 	const [products, setProducts] = useState([])
@@ -63,8 +66,8 @@ const ManageAllProducts = () => {
 				<Table aria-label="Appointments table">
 					<TableHead>
 						<TableRow>
-							<TableCell align="left" >Image</TableCell>
-							<TableCell align="left">Name</TableCell>
+							<TableCell align="left" className="fw-bold" >Image</TableCell>
+							<TableCell align="center" className="fw-bold" >Name</TableCell>
 						</TableRow>
 					</TableHead>
 					<TableBody>
@@ -73,9 +76,15 @@ const ManageAllProducts = () => {
 								key={row._id}
 								sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
 							>
-								<TableCell align="left"> <img align="left" style={{ width: '90px', height: "70px" }} src={row.img} /> </TableCell>
-								<TableCell align="left">{row.name}</TableCell>
-								<TableCell align="left"><Button onClick={() => handleDelete(row._id)} variant='contained' style={{ backgroundColor: '#5CE7ED' }}  >Delete Product</Button></TableCell>
+								<TableCell align="left"> <img align="left" style={{ width: '70px', height: "90px" }} src={row.img} /> </TableCell>
+								<TableCell align="left">{row.name}...</TableCell>
+
+								<TableCell align="left">
+
+									<button className="btn btn-danger p-1 d-flex " onClick={() => handleDelete(row._id)} > <MdDeleteForever size="1.5em" />  Delete</button>
+
+								</TableCell>
+
 							</TableRow>
 						))}
 					</TableBody>

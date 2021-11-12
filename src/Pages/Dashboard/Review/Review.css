@@ -15,7 +15,8 @@
 }
 
 .submit-order-btn {
-	background-color: tomato;
+	/* background-color: tomato; */
+	background-image: linear-gradient(to left, #eb03b8, #fff788);
 	color: white;
 	border: 0;
 	border-radius: 10px;
@@ -23,4 +24,9 @@
 
 .textArea {
 	margin: 20px;
+}
+
+.review {
+	border-radius: 15px;
+	background-image: linear-gradient(to right, #7500e2, #f3e2fd);
 }

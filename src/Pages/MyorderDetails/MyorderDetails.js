@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { MdDeleteForever } from 'react-icons/md';
 
 
 const MyorderDetails = (props) => {
@@ -22,7 +23,7 @@ const MyorderDetails = (props) => {
 				<div className="card-body m-0">
 					<div className="d-flex justify-content-between  align-items-center" >
 						<h6 className="text-danger" >{productStatus}</h6>
-						<button className="btn btn-danger" onClick={() => handleDelete(_id)} >Delete</button>
+						<button className="btn btn-danger  p-1 d-flex" onClick={() => handleDelete(_id)} ><MdDeleteForever size="1.5em" />Delete</button>
 					</div>
 
 				</div>

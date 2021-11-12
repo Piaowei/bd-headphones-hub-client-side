@@ -6,7 +6,7 @@ const ReviewItems = () => {
 	const [isFound, setIsFound] = useState(true);
 	useEffect(() => {
 		setIsFound(true);
-		fetch('http://localhost:5000/review')
+		fetch('https://fierce-woodland-16592.herokuapp.com/review')
 			.then(res => res.json())
 			.then(data => setReviews(data))
 			.finally(() => setIsFound(false));

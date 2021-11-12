@@ -17,7 +17,7 @@ const Service = (props) => {
             <div className="card mb-3 container-fluid no-margin carts" >
                 <div className="row g-0">
                     <div className="col-md-4  ">
-                        <img style={{ height: "280px", width: "200px" }} src={img} className="img-fluid rounded-start my-2 " alt="..." />
+                        <img style={{ height: "200px", width: "120px" }} src={img} className="img-fluid rounded-start my-2 " alt="..." />
                     </div>
                     <div className="col-md-8 no-margin">
                         <div className="card-body ">

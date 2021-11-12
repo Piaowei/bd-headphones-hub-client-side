@@ -14,7 +14,7 @@ const AddService = () => {
 	const onSubmit = data => {
 		setIsFound(true);
 		console.log("This is  data", data);
-		axios.post('http://localhost:5000/products', data)
+		axios.post('https://fierce-woodland-16592.herokuapp.com/products', data)
 			.then(res => {
 				if (res.data.insertedId) {
 					setIsFound(false);

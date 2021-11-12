@@ -1,12 +1,24 @@
 .nav-color {
-	background-color: #f75002;
+	/* background-color: #f75002; */
+	background-image: url(../../../images/header-black.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	/* background-size: cover; */
 	margin-top: 0px;
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
 
 .hover-link:hover {
-	background-color: red;
+	background-color: rgb(48, 34, 248);
 	font-style: italic;
 	border-radius: 5px;
+}
+
+.header-body {
+	/* background-image: url(../../../images/header.jpg); */
+}
+
+.name-person {
+	color: orangered;
 }

@@ -10,7 +10,7 @@ const ManageAllOrders = () => {
 
 	useEffect(() => {
 		setIsFound(true);
-		fetch('http://localhost:5000/orderItems')
+		fetch('https://fierce-woodland-16592.herokuapp.com/orderItems')
 			.then(res => res.json())
 			.then(data => setServices(data))
 			.finally(() => setIsFound(false));
@@ -25,7 +25,7 @@ const ManageAllOrders = () => {
 
 	const handleDelete = id => {
 		console.log("worked", id);
-		const url = `http://localhost:5000/orderItems/${id}`;
+		const url = `https://fierce-woodland-16592.herokuapp.com/orderItems/${id}`;
 		fetch(url, {
 			method: 'DELETE'
 		})
@@ -45,7 +45,7 @@ const ManageAllOrders = () => {
 	const handleUpdateUser = e => {
 		setProductStatus(true)
 		const appove = { condition: "Approved" };
-		const url = `http://localhost:5000/m/orderItems/${e}`;
+		const url = `https://fierce-woodland-16592.herokuapp.com/orderItems/${e}`;
 		fetch(url, {
 			method: 'PUT',
 			headers: {

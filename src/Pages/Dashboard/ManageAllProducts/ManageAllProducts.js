@@ -19,7 +19,7 @@ const ManageAllProducts = () => {
 
 	useEffect(() => {
 		setIsFound(true);
-		fetch('http://localhost:5000/products')
+		fetch('https://fierce-woodland-16592.herokuapp.com/products')
 			.then(res => res.json())
 			.then(data => {
 				setProducts(data)
@@ -38,7 +38,7 @@ const ManageAllProducts = () => {
 	// FOR DELETE
 	const handleDelete = id => {
 		console.log("worked from dashboard ", id);
-		const url = `http://localhost:5000/products/${id}`;
+		const url = `https://fierce-woodland-16592.herokuapp.com/products/${id}`;
 		fetch(url, {
 			method: 'DELETE'
 		})

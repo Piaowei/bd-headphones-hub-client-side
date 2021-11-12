@@ -8,16 +8,12 @@ import './Banner.css';
 const Banner = () => {
     return (
         <>
-            <Carousel>
+            <Carousel className="banner-bg" >
 
                 <Carousel.Item>
                     <div className="card bg-dark text-white  border-0 rounded-0">
                         <img src={banner3} className="card-img border-0" alt="..." />
                         <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center  border-0">
-                            <h1 className="card-title text-center banner-text">To travel is to live</h1>
-
-                            <div> <h6>WE TRAVEL NOT TO SCAPE LIFE,BUT FOR LIFE NOT TO ESCAPE US. OUR SERVICE INSURE YOU A SAFETY & SATISFIED JOURNEY</h6>
-                            </div>
                         </div>
                     </div>
                 </Carousel.Item>
@@ -26,9 +22,6 @@ const Banner = () => {
                     <div className="card bg-dark text-white  border-0 rounded-0">
                         <img src={banner2} className="card-img border-0" alt="..." />
                         <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center  border-0">
-                            <h1 className="card-title text-center banner-text ">Travel to the World</h1>
-
-                            <div> <h6>WE TRAVEL NOT TO SCAPE LIFE,BUT FOR LIFE NOT TO ESCAPE US. OUR SERVICE INSURE YOU A SAFETY & SATISFIED JOURNEY</h6></div>
 
                         </div>
                     </div>
@@ -38,10 +31,7 @@ const Banner = () => {
                     <div className="card bg-dark text-white  border-0 rounded-0">
                         <img src={banner1} className="card-img border-0" alt="..." />
                         <div className="card-img-overlay d-flex justify-content-center align-items-center flex-column  border-0">
-                            <h1 className="card-title text-center fs-1  banner-text ">Explore yourself in China</h1>
-                            <div>
-                                <h6>WE TRAVEL NOT TO SCAPE LIFE,BUT FOR LIFE NOT TO ESCAPE US. OUR SERVICE INSURE YOU A SAFETY & SATISFIED JOURNEY</h6>
-                            </div>
+
 
                         </div>
                     </div>
@@ -49,7 +39,7 @@ const Banner = () => {
 
             </Carousel>
             <br />
-            <h3 className="top-rated pt-2 ">Search your Next Destination</h3>
+            <h3 className="top-rated pt-2 ">Find your Favrite Headphones</h3>
             <div className="container-fluid pb-3 w-75 ">
                 <div className="input-group mb-3 carts-home ">
                     <input type="text" className="form-control" placeholder="Place Name" aria-label="Course Name" aria-describedby="button-addon2" />

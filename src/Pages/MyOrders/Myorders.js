@@ -9,7 +9,7 @@ const Myorders = () => {
 	const [isFound, setIsFound] = useState(true);
 	const [services, setServices] = useState([])
 	useEffect(() => {
-		fetch('http://localhost:5000/orderItems')
+		fetch('https://fierce-woodland-16592.herokuapp.com/orderItems')
 			.then(res => res.json())
 			.then(data => {
 				const single = data.filter(item => item.email.toLowerCase() == user?.email?.toLowerCase());
@@ -25,7 +25,7 @@ const Myorders = () => {
 
 	const handleDelete = id => {
 		console.log("worked", id);
-		const url = `http://localhost:5000/orderItems/${id}`;
+		const url = `https://fierce-woodland-16592.herokuapp.com/orderItems/${id}`;
 		fetch(url, {
 			method: 'DELETE'
 		})

@@ -36,7 +36,7 @@ const Review = () => {
 		data.name = user.displayName;
 		data.rate = value;
 		console.log("This is  data from review ", data);
-		axios.post('http://localhost:5000/review', data)
+		axios.post('https://fierce-woodland-16592.herokuapp.com/review', data)
 			.then(res => {
 				if (res.data.insertedId) {
 					setIsFound(false);

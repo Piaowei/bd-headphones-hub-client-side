@@ -9,7 +9,7 @@ const Services = () => {
     const [isFound, setIsFound] = useState(true);
     useEffect(() => {
         setIsFound(true);
-        fetch('http://localhost:5000/products')
+        fetch('https://fierce-woodland-16592.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setServices(data))
             .finally(() => setIsFound(false));

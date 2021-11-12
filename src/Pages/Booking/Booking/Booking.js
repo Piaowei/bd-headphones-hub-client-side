@@ -15,7 +15,7 @@ const Booking = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${serviceId}`)
+        fetch(`https://fierce-woodland-16592.herokuapp.com/products/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
@@ -26,7 +26,7 @@ const Booking = () => {
         data.productStatus = "Pending";
         console.log("opor theke", data);
         console.log("This is order sumbit info", data);
-        axios.post('http://localhost:5000/orderItems', data)
+        axios.post('https://fierce-woodland-16592.herokuapp.com/orderItems', data)
             .then(res => {
                 console.log("this is res", res);
                 if (res.data.insertedId) {

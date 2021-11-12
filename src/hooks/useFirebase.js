@@ -38,6 +38,7 @@ const useFirebase = () => {
                 const destination = location?.state?.from || '/';
                 // console.log("registration er destination", location.state.from)
                 history.replace(destination);
+                window.location.reload();
                 // history.replace('/');
             })
             .catch((error) => {
@@ -82,18 +83,6 @@ const useFirebase = () => {
             .finally(() => setIsloading(false));
     }
 
-
-    // const signInUsingGoogle = () => {
-    //     setIsLoading(true);
-    //     const googleProvider = new GoogleAuthProvider();
-    //     return signInWithPopup(auth, googleProvider)
-    //         //     .then(result => {
-    //         //         setUser(result.user);
-    //         //     })
-    //         .finally(() => setIsLoading(false));
-    // }
-
-    // observe user state change
     // OBSERVER OF USER STATE
     useEffect(() => {
         console.log("useeffect worked");

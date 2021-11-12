@@ -12,15 +12,15 @@ import { Nav } from 'react-bootstrap';
 const Header = () => {
     const { user, logout } = useAuth();
     return (
-        <div id="nav-bar" className="sticky-top header-body">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light nav-color ">
+        <div id="nav-bar" className="sticky-top header-body navbar-bg ">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light nav-color navbar-bg pb-2 ">
                 <div className="container-fluid nav-color">
                     <a className="navbar-brand " href="#">
                         <img src={img} alt="" width="35" height="30" className="d-inline-block align-text-top" />
                         <span className="ps-3 fw-bold text-white " >BD Headphones Hub</span>
                     </a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler text-white nav-tog " type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon text-white nav-tog"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
 

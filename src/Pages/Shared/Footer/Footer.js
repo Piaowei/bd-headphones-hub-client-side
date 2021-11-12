@@ -21,26 +21,26 @@ const Footer = () => {
 					</div>
 
 					<div className="col text-center footer-text-bd  text-md-start">
-						<h4 className="mb-md-4">About</h4>
-						<p>About Bd China Travel service</p>
-						<p>News</p>
-						<p>Careers</p>
+						<h4 className="mb-md-4">Information</h4>
+						<p>About BD Headphones Hub</p>
+						<p>Specials</p>
+						<p>Delevery Information</p>
 						<p>Terms & Conditions</p>
 						<p>Privacy Statement</p>
 					</div>
 
 
 					<div className="col text-center footer-text-bd text-md-start">
-						<h4 className="mb-md-4" >Other Services</h4>
-						<p><span className="ms-2 text-white" >Investor Relations</span> </p>
-						<p> <span className="ps-2" >Bd-China Rewards</span> </p>
-						<p><span className="ps-2" >Affiliate Program</span> </p>
-						<p> <span className="ps-2" >List My Hotel</span> </p>
-						<p> <span className="ps-2" >Become a Tours & Tickets Vendor</span> </p>
+						<h4 className="mb-md-4" >Collection</h4>
+						<p><span className="ms-2 text-white" >Search</span> </p>
+						<p> <span className="ps-2" >Orders and Returns</span> </p>
+						<p><span className="ps-2" >Consultant</span> </p>
+						<p> <span className="ps-2" >Help and Faq Store</span> </p>
+						<p> <span className="ps-2" >Locations</span> </p>
 					</div>
 					<div className="col text-center footer-text-bd  text-md-start">
 						<h4 className="mb-md-4">Follow Us</h4>
-						<p> Bd China Travel Service Center, <br />28-Nanli Road,Hongshan District,<br /> Wuhan,China</p>
+						<p> Bd Headphones Hub Plaza, <br />28-Nanli Road,Hongshan District,<br /> Wuhan,China</p>
 
 						{/* Used React Icons */}
 
@@ -58,7 +58,7 @@ const Footer = () => {
 				</div>
 
 			</div>
-			<p className="text-white copyright" >CopyRight  &copy; Bd China Travel Service</p>
+			<p className="text-white copyright" >CopyRight  &copy; BD Headphones Hub </p>
 		</div>
 	);
 };

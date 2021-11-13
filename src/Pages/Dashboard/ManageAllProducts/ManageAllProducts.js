@@ -60,10 +60,10 @@ const ManageAllProducts = () => {
 
 
 	return (
-		<div>
-			<h2>My total Order Amount: {products.length}</h2>
-			<TableContainer component={Paper}>
-				<Table aria-label="Appointments table">
+		<div className="px-0 mx-0  "  >
+			< h2 > My total Order Amount: {products.length}</h2 >
+			<TableContainer component={Paper} className="" >
+				<Table aria-label="Appointments table  ">
 					<TableHead>
 						<TableRow>
 							<TableCell align="left" className="fw-bold" >Image</TableCell>
@@ -76,12 +76,15 @@ const ManageAllProducts = () => {
 								key={row._id}
 								sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
 							>
-								<TableCell align="left"> <img align="left" style={{ width: '70px', height: "90px" }} src={row.img} /> </TableCell>
+								<TableCell className="mx-0 px-0 " align="left"> <img className=" mx-2" align="left" style={{ width: '50px', height: "80px" }} src={row.img} /> </TableCell>
+
+
 								<TableCell align="left">{row.name}...</TableCell>
 
-								<TableCell align="left">
+								<TableCell className="px-0 pe-1" align="left">
 
-									<button className="btn btn-danger p-1 d-flex " onClick={() => handleDelete(row._id)} > <MdDeleteForever size="1.5em" />  Delete</button>
+									<button className="btn btn-danger p-0 d-flex " onClick={() => handleDelete(row._id)} > <MdDeleteForever size="1.2em" /> <small>Delete</small> </button>
+									{/* <button>Delete</button> */}
 
 								</TableCell>
 
@@ -90,7 +93,7 @@ const ManageAllProducts = () => {
 					</TableBody>
 				</Table>
 			</TableContainer>
-		</div>
+		</div >
 	);
 };
 export default ManageAllProducts;

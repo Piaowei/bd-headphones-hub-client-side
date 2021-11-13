@@ -17,6 +17,7 @@ const useFirebase = () => {
     // REGISTER USER
 
     const registerUser = (email, password, name, location, history) => {
+        setAuthError('');
         console.log("ami from register", isLoading)
         setIsloading(true);
         createUserWithEmailAndPassword(auth, email, password)
@@ -37,16 +38,22 @@ const useFirebase = () => {
                 });
                 const destination = location?.state?.from || '/';
                 // console.log("registration er destination", location.state.from)
-                history.replace(destination);
-                window.location.reload();
+                // history.replace(destination);
                 // history.replace('/');
+                // window.location.reload();
+            })
+            .then(() => {
+                // window.location.reload();
+
             })
             .catch((error) => {
                 // const errorCode = error.code;
                 // setUser('');
                 setAuthError(error.message);
             })
-            .finally(() => setIsloading(false));
+            .finally(() => {
+                setIsloading(false)
+            });
     };
 
     // LOGIN USER
@@ -61,9 +68,12 @@ const useFirebase = () => {
 
             })
             .catch((error) => {
-                setAuthError(error.message);
+                setAuthError("Something wrong with your Email or Password");
             })
-            .finally(() => setIsloading(false));
+            .finally(() => {
+
+                setIsloading(false)
+            });
     }
 
 
@@ -114,12 +124,6 @@ const useFirebase = () => {
     }
 
 
-    // const logOut = () => {
-    //     setIsLoading(true);
-    //     signOut(auth)
-    //         .then(() => { })
-    //         .finally(() => setIsLoading(false));
-    // }
 
     useEffect(() => {
         fetch(`https://fierce-woodland-16592.herokuapp.com/users/${user.email}`)
@@ -143,7 +147,15 @@ const useFirebase = () => {
             },
             body: JSON.stringify(user)
         })
-            .then()
+            .then(() => {
+                // const destination = location?.state?.from || '/';
+                // console.log("registration er destination", location.state.from)
+                // history.replace(destination);
+                // document.location.href = "/home";
+                window.location.reload();
+                // history.replace('/');
+
+            })
     }
 
     return {
@@ -155,6 +167,7 @@ const useFirebase = () => {
         loginUser,
         isLoading,
         authError,
+        setAuthError,
         signInWithGoogle
     }
 }

@@ -7,7 +7,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { height } from '@mui/system';
 import Button from '@restart/ui/esm/Button';
 
 const Appointments = ({ date }) => {

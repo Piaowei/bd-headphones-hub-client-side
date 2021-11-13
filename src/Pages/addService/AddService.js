@@ -42,12 +42,12 @@ const AddService = () => {
 
 			{/* -------------------------------------------------
                    ADD NEW SERVICE
------------------------------------------------------*/}
+             -----------------------------------------------------*/}
 			{
 				isFound && <Spinner animation="border" variant="danger" />
 			}
 
-			<h1>Add a service</h1>
+			<h1>Add a new Product</h1>
 			<form onSubmit={handleSubmit(onSubmit)}>
 
 				<input {...register("name", { required: true })} placeholder="Product name" />
@@ -56,10 +56,10 @@ const AddService = () => {
 				<textarea {...register("description", { required: true })} placeholder="Description" />
 				{errors.description && <span className="text-danger">Description is required</span>}
 
-				<input type="number" {...register("price", { required: true })} placeholder="Price" />
+				<input  {...register("price", { required: true })} placeholder="Price" />
 				{errors.price && <span className="text-danger">price is required </span>}
 
-				<input type="number" {...register("time", { required: true })} placeholder="Total Ratings" />
+				<input type="number" {...register("time", { required: true })} placeholder="Total reviews amount" />
 				{errors.time && <span className="text-danger">Total Ratings required</span>}
 
 				<input {...register("img")} placeholder="Image URL" />

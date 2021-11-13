@@ -25,59 +25,62 @@ function App() {
     <div className="App">
       <AuthProvider>
         <Router>
-          {/* <Header></Header> */}
           <Switch>
 
             <Route exact path="/">
               <Home></Home>
             </Route>
+
             <Route path="/home">
               <Home></Home>
             </Route>
+
             <Route path="/login">
               <Login></Login>
             </Route>
+
             <Route path="/register">
               <Register />
             </Route>
+
             <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>
             </PrivateRoute>
 
-            {/* <PrivateRoute path="/myorders">
-              <Myorders></Myorders>
-            </PrivateRoute> */}
 
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>
 
             <Route path="/myorderDetails" >
-
               <MyorderDetails></MyorderDetails>
             </Route>
 
             <PrivateRoute path="/addservice" >
               <AddService></AddService>
             </PrivateRoute>
+
             <Route path="/services" >
               <Services></Services>
             </Route>
+
             <Route path="/service" >
               <Service></Service>
             </Route>
+
             <Route path="/moreProducts" >
               <MoreProductsMain></MoreProductsMain>
             </Route>
+
             <PrivateRoute path="/manageAllOrders" >
               <ManageAllOrders></ManageAllOrders>
             </PrivateRoute>
+
             <Route path="*">
               <NotFound></NotFound>
             </Route>
-          </Switch>
-          {/* <Footer></Footer> */}
 
+          </Switch>
         </Router>
       </AuthProvider>
     </div>

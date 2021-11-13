@@ -9,7 +9,6 @@ const ManageAllOrders = () => {
 	const [productStatus, setProductStatus] = useState(false);
 
 	useEffect(() => {
-		setIsFound(true);
 		fetch('https://fierce-woodland-16592.herokuapp.com/orderItems')
 			.then(res => res.json())
 			.then(data => setServices(data))
@@ -33,14 +32,13 @@ const ManageAllOrders = () => {
 			.then(data => {
 
 				if (data.deletedCount) {
-					alert('deleted');
+					alert('Deleted Successfully');
 					const remaining = services.filter(service => service._id !== id);
 					setServices(remaining);
 				}
 			})
 	}
 
-	console.log("hello brooooo", services);
 	//UPDATE API
 	const handleUpdateUser = e => {
 		setProductStatus(true)
@@ -57,7 +55,7 @@ const ManageAllOrders = () => {
 			.then(data => {
 				console.log("data", data);
 				if (data.modifiedCount > 0) {
-					alert('updated successfully')
+					alert('Order successfully Approved')
 					setProductStatus("");
 				}
 			})

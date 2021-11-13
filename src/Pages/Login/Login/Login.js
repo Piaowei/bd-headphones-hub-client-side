@@ -1,14 +1,13 @@
-import { getAuth } from '@firebase/auth';
 import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import useAuth from './../../../hooks/useAuth';
 import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
 import { FcGoogle } from 'react-icons/fc';
 import { NavLink } from 'react-router-dom';
-// import useAuth from '../../../hooks/useAuth';
-// import login from '../../../images/login.png'
 
 import './Login.css'
+import { height } from '@mui/system';
 const Login = () => {
 
     const [loginData, setLoginData] = useState({});
@@ -28,7 +27,6 @@ const Login = () => {
 
     const handleLoginSubmit = e => {
         loginUser(loginData.email, loginData.password, location, history);
-        // console.log(loginData)
         e.preventDefault();
     }
 
@@ -37,22 +35,6 @@ const Login = () => {
     }
 
 
-
-
-
-
-
-    /* const { signInUsingGoogle } = useAuth();
-    const auth = getAuth();
-    const location = useLocation();
-    const history = useHistory();
-    const redirect_uri = location.state?.from || '/home#home';
-    const handleGoogleSignIn = () => {
-        signInUsingGoogle()
-            .then(result => {
-                history.push(redirect_uri);
-            })
-    } */
 
     return (
 
@@ -63,7 +45,7 @@ const Login = () => {
                     <form onSubmit={handleLoginSubmit}>
                         <TextField id="standard-basic"
                             sx={{ width: '75%', m: 1 }}
-                            label="Your Name"
+                            label="Your Email"
                             type="email"
                             name="email"
                             onBlur={handleOnChange}
@@ -77,18 +59,18 @@ const Login = () => {
                             onBlur={handleOnChange}
                             autoComplete="current-password"
                             variant="standard" />
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained" >Login</Button>
+                        <Button sx={{ width: '75%', m: 1 }} type="submit" className="login-btn" > <span className="text-white fw-bold" >Login</span> </Button>
                         <NavLink style={{ textDecoration: 'none' }} to="/register">
                             <Button variant="text">New User? Please Register</Button>
                         </NavLink>
-                        {/* ------------------------------ */}
-
-                        {isLoading && <CircularProgress />}
+                        <h6>or</h6>
+                        {isLoading && <Spinner animation="border" variant="danger" />}
                         {user?.email && <Alert severity="success">User Created Successfully!</Alert>}
                         {authError && <Alert severity="error">{authError}</Alert>}
                     </form>
-                    <p>----------------------------------------</p>
-                    <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
+
+
+                    <button className="btn  btn-light btn-outline-warning" onClick={handleGoogleSignIn} > < FcGoogle size="1.5em" />Google Sign In</button>
                 </Grid>
                 <Grid item xs={4} md={6} >
                     {/* <img style={{ width: "100%" }} src={login} alt="" /> */}
@@ -97,13 +79,6 @@ const Login = () => {
             </Grid>
         </Container >
 
-        // <div id="nav-bar" className="my-5">
-        //     <div className="my-5 py-5 ">
-        //         <h4>Please Login/Google Sign in</h4>
-        //         <button onClick={handleGoogleSignIn} className="btn google "><FcGoogle size="2em" /></button>
-
-        //     </div>
-        // </div>
 
     );
 };

@@ -4,3 +4,12 @@
 	border: 1px solid #05fbef;
 	background: white;
 }
+
+.login-btn {
+	color: white;
+	/* background-color: tomato; */
+	background-image: linear-gradient(to right, #4f06fa, #0068c8, #b790ff);
+	color: white;
+	border: 0;
+	border-radius: 10px;
+}

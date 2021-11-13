@@ -5,6 +5,7 @@ import useAuth from '../../../hooks/useAuth';
 const MakeAdmin = () => {
 	const [email, setEmail] = useState('');
 	const [success, setSuccess] = useState(false);
+	const [unSuccess, setUnSuccess] = useState(false);
 	const { token } = useAuth();
 
 	const handleOnBlur = e => {
@@ -12,6 +13,8 @@ const MakeAdmin = () => {
 	}
 
 	const handleAdminSubmit = e => {
+		setSuccess(false);
+		setUnSuccess(false);
 		const user = { email };
 		fetch('https://fierce-woodland-16592.herokuapp.com/users/admin', {
 			method: 'PUT',
@@ -27,6 +30,9 @@ const MakeAdmin = () => {
 					// setEmail('');
 					setSuccess(true);
 				}
+				else {
+					setUnSuccess(true);
+				}
 			})
 		e.preventDefault()
 	}
@@ -34,15 +40,18 @@ const MakeAdmin = () => {
 		<div>
 			<h2>Make me admin</h2>
 			<form onSubmit={handleAdminSubmit} >
-				<TextField
+				<TextField className="mx-3"
 					sx={{ width: '50%' }}
 					label="Email"
 					type="email"
 					onBlur={handleOnBlur}
 					variant="standard"
 				/>
-				<Button type="submit" variant="contained" >Make Admin</Button>
+				<button className="btn btn-info" type="submit" variant="contained" >Make Admin</button>
+				<br />
+				<br />
 				{success && <Alert severity="success">Made Admin Successfully!</Alert>}
+				{unSuccess && <Alert severity="error">Invalid User OR User is Already an Admin</Alert>}
 			</form>
 		</div>
 	);

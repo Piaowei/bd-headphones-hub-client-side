@@ -36,14 +36,10 @@ const useFirebase = () => {
                 }).then(() => {
                 }).catch((error) => {
                 });
-                const destination = location?.state?.from || '/';
+                // const destination = location?.state?.from || '/';
                 // console.log("registration er destination", location.state.from)
                 // history.replace(destination);
                 // history.replace('/');
-                // window.location.reload();
-            })
-            .then(() => {
-                // window.location.reload();
 
             })
             .catch((error) => {
@@ -99,10 +95,6 @@ const useFirebase = () => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-                getIdToken(user)
-                    .then(idToken => {
-                        setToken(idToken)
-                    })
             } else {
                 setUser({})
             }
@@ -148,12 +140,6 @@ const useFirebase = () => {
             body: JSON.stringify(user)
         })
             .then(() => {
-                // const destination = location?.state?.from || '/';
-                // console.log("registration er destination", location.state.from)
-                // history.replace(destination);
-                // document.location.href = "/home";
-                window.location.reload();
-                // history.replace('/');
 
             })
     }

@@ -31,6 +31,11 @@ const Register = () => {
 		}
 		registerUser(loginData.email, loginData.password, loginData.name, location, history);
 	}
+
+	const handleGoHome = () => {
+		document.location.href = "/";
+	}
+
 	return (
 		<Container>
 			<Grid container spacing={2}>
@@ -82,9 +87,7 @@ const Register = () => {
 					{authError && <Alert severity="error">{authError}</Alert>}
 
 					<br />
-					{user?.email && <Link className=" fw-bolder  " to="/home" ><button className="  fw-bold btn btn-outline-danger  " > <FcHome size="2em" /> <span className=" fw-bold fs-5" >Go Back Home</span> </button></Link>
-
-
+					{user?.email && <button onClick={handleGoHome} className="  fw-bold btn btn-outline-danger  " > <FcHome size="2em" /> <span className=" fw-bold fs-5" >Go Back Home</span> </button>
 					}
 
 				</Grid>

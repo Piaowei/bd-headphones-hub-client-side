@@ -41,7 +41,7 @@ const Review = () => {
 			.then(res => {
 				if (res.data.insertedId) {
 					setIsFound(false);
-					alert("added successfully");
+					alert("Review added successfully");
 					reset();
 				}
 			})

@@ -7,8 +7,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { height } from '@mui/system';
-import Button from '@restart/ui/esm/Button';
 import { Spinner } from 'react-bootstrap';
 import { MdDeleteForever } from 'react-icons/md';
 
@@ -17,16 +15,12 @@ import "./ManageAllProducts.css"
 const ManageAllProducts = () => {
 	const [products, setProducts] = useState([])
 	const [isFound, setIsFound] = useState(true);
-	const { user } = useAuth();
-	const [appointments, setAppointments] = useState([]);
-
 	useEffect(() => {
 		setIsFound(true);
 		fetch('https://fierce-woodland-16592.herokuapp.com/products')
 			.then(res => res.json())
 			.then(data => {
 				setProducts(data)
-				console.log("from manage orders", data)
 			})
 			.finally(() => setIsFound(false));
 
@@ -40,7 +34,6 @@ const ManageAllProducts = () => {
 
 	// FOR DELETE
 	const handleDelete = id => {
-		console.log("worked from dashboard ", id);
 		const url = `https://fierce-woodland-16592.herokuapp.com/products/${id}`;
 		fetch(url, {
 			method: 'DELETE'

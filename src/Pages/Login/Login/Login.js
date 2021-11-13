@@ -1,13 +1,12 @@
-import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
+import { Alert, Button, Container, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import useAuth from './../../../hooks/useAuth';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
 import { FcGoogle } from 'react-icons/fc';
 import { NavLink } from 'react-router-dom';
 
 import './Login.css'
-import { height } from '@mui/system';
 const Login = () => {
 
     const [loginData, setLoginData] = useState({});

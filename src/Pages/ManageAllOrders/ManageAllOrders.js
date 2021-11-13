@@ -23,7 +23,6 @@ const ManageAllOrders = () => {
 
 
 	const handleDelete = id => {
-		console.log("worked", id);
 		const url = `https://fierce-woodland-16592.herokuapp.com/orderItems/${id}`;
 		fetch(url, {
 			method: 'DELETE'
@@ -53,7 +52,6 @@ const ManageAllOrders = () => {
 		})
 			.then(res => res.json())
 			.then(data => {
-				console.log("data", data);
 				if (data.modifiedCount > 0) {
 					alert('Order successfully Approved')
 					setProductStatus("");

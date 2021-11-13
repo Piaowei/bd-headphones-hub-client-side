@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MdDeleteForever } from 'react-icons/md';
 import './ManageOrderDetails.css'
 const ManageOrderDetails = (props) => {
 	const { productName, productimg, _id, productStatus, email, name } = props.service;
-	const { handleDelete, id } = props;
+	const { handleDelete } = props;
 	const { handleUpdateUser } = props;
 
 

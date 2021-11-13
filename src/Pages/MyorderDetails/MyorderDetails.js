@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MdDeleteForever } from 'react-icons/md';
 
 
 const MyorderDetails = (props) => {
 
 	const { productName, productimg, _id, productStatus } = props.service;
-	const { handleDelete, id } = props;
+	const { handleDelete } = props;
 
 
 

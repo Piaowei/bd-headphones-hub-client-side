@@ -3,11 +3,9 @@ import * as React from 'react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import StarIcon from '@mui/icons-material/Star';
-import { Spinner } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
-import Typography from '@mui/material/Typography';
 import fila from '../../../images/fila.jpg'
 import './Review.css'
 
@@ -36,7 +34,6 @@ const Review = () => {
 		setIsFound(true);
 		data.name = user.displayName;
 		data.rate = value;
-		console.log("This is  data from review ", data);
 		axios.post('https://fierce-woodland-16592.herokuapp.com/review', data)
 			.then(res => {
 				if (res.data.insertedId) {

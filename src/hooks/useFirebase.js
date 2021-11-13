@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, getIdToken } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useState, useEffect } from 'react';
 import initializeAuthentication from './../Pages/Login/Firebase/firebase.init';
 
@@ -9,7 +9,7 @@ const useFirebase = () => {
     const [isLoading, setIsloading] = useState(true);
     const [authError, setAuthError] = useState('');
     const [admin, setAdmin] = useState(false);
-    const [token, setToken] = useState('');
+    const [token] = useState('');
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
@@ -18,7 +18,7 @@ const useFirebase = () => {
 
     const registerUser = (email, password, name, location, history) => {
         setAuthError('');
-        console.log("ami from register", isLoading)
+
         setIsloading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -36,10 +36,7 @@ const useFirebase = () => {
                 }).then(() => {
                 }).catch((error) => {
                 });
-                // const destination = location?.state?.from || '/';
-                // console.log("registration er destination", location.state.from)
-                // history.replace(destination);
-                // history.replace('/');
+
 
             })
             .catch((error) => {
@@ -58,7 +55,6 @@ const useFirebase = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const destination = location?.state?.from || '/';
-                console.log("Login er destination", destination)
                 history.replace(destination);
                 setAuthError('');
 
@@ -91,7 +87,6 @@ const useFirebase = () => {
 
     // OBSERVER OF USER STATE
     useEffect(() => {
-        console.log("useeffect worked");
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
@@ -121,7 +116,6 @@ const useFirebase = () => {
         fetch(`https://fierce-woodland-16592.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => {
-                console.log("data of admin", data.admin)
                 setAdmin(data.admin)
             })
     }, [user.email])

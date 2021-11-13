@@ -1,14 +1,10 @@
 import React from 'react';
 import './Service.css';
 import { Nav } from 'react-bootstrap';
-import { Spinner } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
-import { Link, NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 const Service = (props) => {
-    const { user, isLoading } = useAuth();
-    // const {service} = props;
     const { _id, name, price, description, img } = props.service;
 
 

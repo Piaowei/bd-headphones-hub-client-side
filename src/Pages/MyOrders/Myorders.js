@@ -24,7 +24,6 @@ const Myorders = () => {
 	}
 
 	const handleDelete = id => {
-		console.log("worked", id);
 		const url = `https://fierce-woodland-16592.herokuapp.com/orderItems/${id}`;
 		fetch(url, {
 			method: 'DELETE'

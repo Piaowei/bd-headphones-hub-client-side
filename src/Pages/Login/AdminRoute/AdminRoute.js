@@ -8,7 +8,6 @@ const AdminRoute = ({ children, ...rest }) => {
 	if (isLoading) {
 		return <CircularProgress />
 	}
-	console.log("check admin in admin route", admin)
 	return (
 		<Route
 			{...rest}

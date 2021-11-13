@@ -1,4 +1,4 @@
-import { Alert, Button, TextField } from '@mui/material';
+import { Alert, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 
@@ -6,7 +6,7 @@ const MakeAdmin = () => {
 	const [email, setEmail] = useState('');
 	const [success, setSuccess] = useState(false);
 	const [unSuccess, setUnSuccess] = useState(false);
-	const { token } = useAuth();
+
 
 	const handleOnBlur = e => {
 		setEmail(e.target.value);
@@ -26,7 +26,6 @@ const MakeAdmin = () => {
 			.then(res => res.json())
 			.then(data => {
 				if (data.modifiedCount) {
-					console.log(data);
 					// setEmail('');
 					setSuccess(true);
 				}

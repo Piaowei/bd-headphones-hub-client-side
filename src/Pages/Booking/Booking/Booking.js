@@ -26,11 +26,9 @@ const Booking = () => {
         data.productName = service.name;
         data.productimg = service.img;
         data.productStatus = "Pending";
-        console.log("opor theke", data);
-        console.log("This is order sumbit info", data);
+
         axios.post('https://fierce-woodland-16592.herokuapp.com/orderItems', data)
             .then(res => {
-                console.log("this is res", res);
                 if (res.data.insertedId) {
                     alert("Ordered Submitted successfully");
                     reset();

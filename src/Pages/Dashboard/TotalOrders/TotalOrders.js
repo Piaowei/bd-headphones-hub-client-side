@@ -19,7 +19,6 @@ const TotalOrders = ({ date }) => {
 		fetch(url)
 			.then(res => res.json())
 			.then(data => {
-				console.log("order items", data)
 				setTotalOrders(data)
 			})
 	}, [])

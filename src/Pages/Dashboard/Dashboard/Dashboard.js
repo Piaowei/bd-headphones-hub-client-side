@@ -7,8 +7,8 @@ import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-
-
+import { FcHome } from 'react-icons/fc';
+import { BiLogOut } from 'react-icons/bi';
 
 import {
 
@@ -77,8 +77,8 @@ function Dashboard(props) {
 
 			<Box style={{ textAlign: "start" }}>
 
-				<Link className="nav-link active fw-bolder hover-link5  " to="/home" ><Button className="text-warning hover-link5  fw-bold   " color="inherit">Go Back Home</Button></Link>
-				<h6 className="ps-4 nav-link active fs-6  fw-bold  fw-bolder hover-link text-danger hover-link5  " onClick={logout}>Logout</h6>
+				<Link className="nav-link active fw-bolder hover-link5  " to="/home" ><Button className="text-warning hover-link5  fw-bold   " color="inherit">  <FcHome size="1.5em" className="me-1" style={{ marginTop: '-7px' }} /> Go Back Home</Button></Link>
+				<h6 className="ps-4 nav-link active fs-6  fw-bold  fw-bolder hover-link text-danger hover-link5  " onClick={logout}> <BiLogOut size="1.5em" /> Logout</h6>
 
 			</Box>
 
@@ -176,15 +176,9 @@ function Dashboard(props) {
 					<AdminRoute path={`${path}/addservice`}>
 						<AddService></AddService>
 					</AdminRoute>
-					{/* <AdminRoute path={`${path}/addDoctor`}>
-						<AddDoctor></AddDoctor>
-					</AdminRoute> */}
 					<AdminRoute path={`${path}/manageAllProducts`}>
 						<ManageAllProducts></ManageAllProducts>
 					</AdminRoute>
-					{/* <Route exact path={`${path}/home`}>
-						<Home></Home>
-					</Route> */}
 				</Switch>
 
 

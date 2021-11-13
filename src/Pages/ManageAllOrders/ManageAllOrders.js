@@ -41,7 +41,7 @@ const ManageAllOrders = () => {
 	//UPDATE API
 	const handleUpdateUser = e => {
 		setProductStatus(true)
-		const appove = { condition: "Approved" };
+		const appove = { condition: "Shipped" };
 		const url = `https://fierce-woodland-16592.herokuapp.com/orderItems/${e}`;
 		fetch(url, {
 			method: 'PUT',
@@ -53,7 +53,7 @@ const ManageAllOrders = () => {
 			.then(res => res.json())
 			.then(data => {
 				if (data.modifiedCount > 0) {
-					alert('Order successfully Approved')
+					alert('Order successfully Shipped')
 					setProductStatus("");
 				}
 			})

@@ -33,7 +33,7 @@ const ManageOrderDetails = (props) => {
 									<button className="btn btn-danger  p-1 d-flex  me-3" onClick={() => handleDelete(_id)} ><MdDeleteForever size="1.5em" />Delete</button>
 								</div>
 								<div>
-									<button className="btn btn-primary p-1" onClick={() => handleUpdateUser(_id)} >Approve Order</button>
+									<button className="btn btn-primary p-1" onClick={() => handleUpdateUser(_id)} >Ship Order</button>
 								</div>
 
 

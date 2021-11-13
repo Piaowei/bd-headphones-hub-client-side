@@ -39,7 +39,7 @@ const Banner = () => {
 
             </Carousel>
             <br />
-            <h3 className="top-rated pt-2 ">Find your Favrite Headphones</h3>
+            <h3 className="top-rated pt-2 ">Find your Favorite Headphones</h3>
             <div className="container-fluid pb-3 w-75 ">
                 <div className="input-group mb-3 carts-home ">
                     <input type="text" className="form-control" placeholder="Place Name" aria-label="Course Name" aria-describedby="button-addon2" />

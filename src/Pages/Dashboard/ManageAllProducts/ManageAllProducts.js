@@ -61,7 +61,7 @@ const ManageAllProducts = () => {
 
 	return (
 		<div className="px-0 mx-0  "  >
-			< h2 > My total Order Amount: {products.length}</h2 >
+			< h2 > Total Product Amount: {products.length}</h2 >
 			<TableContainer component={Paper} className="" >
 				<Table aria-label="Appointments table  ">
 					<TableHead>

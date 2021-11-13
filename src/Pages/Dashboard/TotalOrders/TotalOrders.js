@@ -9,9 +9,9 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Button from '@restart/ui/esm/Button';
 
-const Appointments = ({ date }) => {
+const TotalOrders = ({ date }) => {
 	const { user } = useAuth();
-	const [appointments, setAppointments] = useState([]);
+	const [TotalOrders, setTotalOrders] = useState([]);
 
 	useEffect(() => {
 
@@ -20,15 +20,15 @@ const Appointments = ({ date }) => {
 			.then(res => res.json())
 			.then(data => {
 				console.log("order items", data)
-				setAppointments(data)
+				setTotalOrders(data)
 			})
 	}, [])
 
 	return (
 		<div>
-			<h2>My total Order Amount: {appointments.length}</h2>
+			<h2>My total Order Amount: {TotalOrders.length}</h2>
 			<TableContainer component={Paper}>
-				<Table aria-label="Appointments table">
+				<Table aria-label="TotalOrders table">
 					<TableHead>
 						<TableRow>
 							<TableCell align="left" >Image</TableCell>
@@ -38,7 +38,7 @@ const Appointments = ({ date }) => {
 						</TableRow>
 					</TableHead>
 					<TableBody>
-						{appointments.map((row) => (
+						{TotalOrders.map((row) => (
 							<TableRow
 								key={row._id}
 								sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -61,4 +61,4 @@ const Appointments = ({ date }) => {
 	);
 };
 
-export default Appointments;
+export default TotalOrders;

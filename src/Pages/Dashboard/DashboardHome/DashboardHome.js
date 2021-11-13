@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { Button, Grid } from '@mui/material';
 
-import Appointments from '../Appointments/Appointments';
-import ManageAllProducts from '../ManageAllProducts/ManageAllProducts';
+
 import ManageAllOrders from '../../ManageAllOrders/ManageAllOrders';
 import useAuth from '../../../hooks/useAuth';
 import Myorders from '../../MyOrders/Myorders';

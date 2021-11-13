@@ -28,12 +28,12 @@ import {
 import { Button, Grid } from '@mui/material';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
-import AddDoctor from '../AddDoctor/AddDoctor';
+// import AddDoctor from '../AddDoctor/AddDoctor';
 import useAuth from '../../../hooks/useAuth';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import AddService from '../../addService/AddService';
 import ManageAllProducts from '../ManageAllProducts/ManageAllProducts';
-import Home from '../../Home/Home/Home';
+// import Home from '../../Home/Home/Home';
 import Myorders from '../../MyOrders/Myorders';
 import Payment from '../Payment/Payment';
 import PrivateRoute from '../../Login/PrivateRoute/PrivateRoute';
@@ -182,9 +182,9 @@ function Dashboard(props) {
 					<AdminRoute path={`${path}/addservice`}>
 						<AddService></AddService>
 					</AdminRoute>
-					<AdminRoute path={`${path}/addDoctor`}>
+					{/* <AdminRoute path={`${path}/addDoctor`}>
 						<AddDoctor></AddDoctor>
-					</AdminRoute>
+					</AdminRoute> */}
 					<AdminRoute path={`${path}/manageAllProducts`}>
 						<ManageAllProducts></ManageAllProducts>
 					</AdminRoute>

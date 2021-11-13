@@ -27,7 +27,7 @@ const Service = (props) => {
                             <div className="d-flex justify-content-between align-items-center">
                                 <h5 className="price" >Price : <span className="text-black" >$ {price}</span> </h5>
                                 <Nav.Link as={HashLink} to={`/booking/${_id}#booking`}>
-                                    <button className="btn btn-danger button ">Buy Now </button>
+                                    <button className="btn btn-danger button buy-btn-color ">Buy Now </button>
                                 </Nav.Link>
                             </div>
 

@@ -21,7 +21,7 @@ const ReviewItems = () => {
 	return (
 
 		<div className="container-fluid">
-			<h1 className="my-3 title-color">Customers Review  </h1>
+			<h1 style={{ color: "#4f06fa" }} className="my-3 title-color">Customers Review  </h1>
 			<div className="row row-cols-1 row-cols-md-4 g-4">
 				{
 					reviews.map(review => <ReviewItem

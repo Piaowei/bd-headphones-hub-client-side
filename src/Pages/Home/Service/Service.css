@@ -12,5 +12,10 @@
 }
 
 .button {
-    background-color: #f75002;
+    /* background-color: #f75002; */
+    background-image: linear-gradient(to right, #ff0505, #f75002, #ffa088);
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    border: red;
 }
